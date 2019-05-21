@@ -260,5 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 #Unity Library and project settings
-Library/
-ProjectSettings/
+Library
+ProjectSettings
