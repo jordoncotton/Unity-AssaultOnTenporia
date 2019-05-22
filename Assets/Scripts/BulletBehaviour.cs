@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class BulletBehaviour : MonoBehaviour
 {
     //   public float bulletSpeed = 10f;
@@ -26,6 +26,13 @@ public class BulletBehaviour : MonoBehaviour
     [SerializeField]
     private int maxSpeed;
     private float timer;
-
-
+    private Vector3 velocity;
+    private void Start()
+    {
+        velocity = transform.position.normalized*maxSpeed;
+    }
+    private void Update()
+    {
+        transform.position += velocity * Time.deltaTime;
+    }
 }
